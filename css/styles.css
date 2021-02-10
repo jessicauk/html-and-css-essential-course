@@ -1,0 +1,65 @@
+@font-face {
+  font-family: charter;
+  src: url("../fonts/charter-regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: charter-bold;
+  src: url("../fonts/charter-bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: charter-italic;
+  src: url("../fonts/charter-italic.otf");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: charter-bold-italic;
+  src: url("../fonts/charter-bold-italic.otf");
+  font-weight: bold;
+  font-style: italic;
+}
+:root {
+  font-size: 18px;
+  --gray30: #212121;
+  --gray20: #212429;
+  --gray10: #616161;
+}
+html {
+  font-size: 16px;
+}
+body {
+  color: var(--gray30);
+  font-family: charter;
+}
+a {
+  color: var(--gray30);
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+}
+header {
+  /*--gray10:red;  update variable value inside this context*/
+  font-size: 14px;
+  color: var(--gray10);
+}
+header a {
+  font-size: 14px;
+  color: var(--gray10);
+  text-decoration: none;
+}
+header a:hover {
+  color: var(--gray30);
+}
+nav details summary {
+  font-weight: bold;
+}

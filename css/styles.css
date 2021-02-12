@@ -28,6 +28,7 @@
   --gray20: #212429;
   --gray10: #616161;
   --yellow: #fec62e;
+  /* direction: rtl; */
 }
 html {
   font-size: 16px;
@@ -72,3 +73,20 @@ pre {
   height: 350px;
   background-image: linear-gradient(to top, rgba(255,255,255,0.3), transparent), url('../images/pattern.png');
 }
+.section-content {
+    counter-reset: titleList;
+}
+.section-content h3 {
+    counter-increment: titleList;
+}
+.section-content h3::before {
+    content: counter(titleList, decimal);
+}
+.section-content h3::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    background: var(--gray30);
+    display: block;
+}
+

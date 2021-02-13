@@ -1,0 +1,124 @@
+@font-face {
+  font-family: charter;
+  src: url("../fonts/charter-regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: charter;
+  src: url("../fonts/charter-bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: charter;
+  src: url("../fonts/charter-italic.otf");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: charter;
+  src: url("../fonts/charter-bold-italic.otf");
+  font-weight: bold;
+  font-style: italic;
+}
+:root {
+  font-size: 18px;
+  --gray30: #212121;
+  --gray20: #212429;
+  --gray10: #616161;
+  --yellow: #fec62e;
+  /* direction: rtl; */
+}
+html {
+  font-size: 16px;
+}
+body {
+  color: var(--gray30);
+  /* font-family: charter; */
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+a {
+  color: var(--gray30);
+}
+h1 {
+  font-size: 60px;
+  margin-bottom: 16px;
+  margin-top: 64px;
+}
+h1 ~ p {
+  margin: 64px 0;
+}
+h2 {
+  font-size: 2em;
+  margin: 64px 0 40px;
+  font-weight: normal;
+}
+h3 {
+  font-size: 1.5em;
+  margin-top:16px;
+  margin-bottom: 24px;
+  font-weight: nor;
+}
+header {
+  /*--gray10:red;  update variable value inside this context*/
+  font-size: 14px;
+  color: var(--gray10);
+}
+header a {
+  font-size: 14px;
+  color: var(--gray10);
+  text-decoration: none;
+}
+header a:hover {
+  color: var(--gray30);
+}
+nav details summary {
+  font-weight: bold;
+}
+pre {
+  background-color: var(--yellow);
+}
+.hero {
+  height: 350px;
+  background-image: linear-gradient(to top, rgba(255,255,255,0.3), transparent), url('../images/pattern.png');
+}
+.section-content {
+  margin-top: 164px;
+  counter-reset: titleList;
+}
+.section-content:first-of-type {
+  margin: 0;
+}
+.section-content ol li {
+  line-height: 24px;
+}
+.section-content ul li {
+  margin-bottom: 16px;
+}
+.section-content + br {
+  display: none;
+}
+.section-content img {
+  margin-top: 40px;
+}
+.section-content h3 {
+    counter-increment: titleList;
+}
+.section-content h3::before {
+    content: counter(titleList, decimal);
+}
+.section-content h3::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    background: var(--gray30);
+    display: block;
+}
+blockquote {
+  margin: 32px 0;
+  padding: 0px 16px;
+  border-left: 4px solid var(--gray30);
+}
+

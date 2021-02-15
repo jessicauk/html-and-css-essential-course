@@ -32,6 +32,7 @@
 }
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 body {
   color: var(--gray30);
@@ -46,9 +47,7 @@ h1 {
   font-size: 60px;
   margin-bottom: 16px;
   margin-top: 64px;
-}
-h1 ~ p {
-  margin: 64px 0;
+  font-weight: normal;
 }
 h2 {
   font-size: 2em;
@@ -57,32 +56,61 @@ h2 {
 }
 h3 {
   font-size: 1.5em;
-  margin-top:16px;
+  margin-top: 16px;
   margin-bottom: 24px;
-  font-weight: nor;
+  font-weight: normal;
+  position: sticky;
+  top: 0;
+  background: white;
 }
 header {
   /*--gray10:red;  update variable value inside this context*/
   font-size: 14px;
+  width: 188px;
   color: var(--gray10);
+  z-index: 1;
+  position: absolute;
+  top: 64px;
+  left: -232px;
 }
 header a {
   font-size: 14px;
   color: var(--gray10);
   text-decoration: none;
 }
+header li {
+  margin-bottom: 16px;
+}
 header a:hover {
   color: var(--gray30);
 }
+nav details {
+  cursor: pointer;
+}
 nav details summary {
   font-weight: bold;
+  outline: none;
+  line-height: 24px;
 }
 pre {
   background-color: var(--yellow);
+  padding: 40px;
+  font-family: "Roboto";
+  line-height: 24px;
+  font-size: 16px;
+  margin-top: 16px;
+}
+hr {
+  margin: 64px 0;
 }
 .hero {
   height: 350px;
-  background-image: linear-gradient(to top, rgba(255,255,255,0.3), transparent), url('../images/pattern.png');
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    ),
+    url("../images/pattern.png");
 }
 .section-content {
   margin-top: 164px;
@@ -103,22 +131,68 @@ pre {
 .section-content img {
   margin-top: 40px;
 }
+.section-content .image {
+  width: 100%;
+  height: 500px;
+  margin: auto;
+  padding: 20px;
+}
 .section-content h3 {
-    counter-increment: titleList;
+  counter-increment: titleList;
+  padding-bottom: 8px;
 }
 .section-content h3::before {
-    content: counter(titleList, decimal);
+  content: counter(titleList, decimal) ". ";
 }
 .section-content h3::after {
-    content: '';
-    width: 30px;
-    height: 4px;
-    background: var(--gray30);
-    display: block;
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 blockquote {
   margin: 32px 0;
   padding: 0px 16px;
   border-left: 4px solid var(--gray30);
+  font-size: 24px;
+  line-height: 24px;
 }
-
+blockquote span {
+  color: var(--gray10);
+}
+blockquote span::before {
+  content: "-";
+}
+input {
+  padding: 10px 20px;
+  width: 500px;
+}
+.debug {
+  box-shadow: inset 0 0 0 10px red;
+  /* outline: 1px solid red; */
+  /* background: red; */
+  /* border: 1px solid red!important;
+  box-sizing: border-box; */
+}
+.header {
+  border: 1px solid red;
+  position: sticky;
+  top: 0;
+}
+.header-content {
+  position: relative;
+}
+.main {
+  background-color: white;
+}
+.wrapper {
+  width: 902px;
+  margin: auto;
+}
+.main-content {
+  padding: 0 10px;
+}

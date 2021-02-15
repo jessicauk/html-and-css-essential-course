@@ -179,7 +179,6 @@ input {
   box-sizing: border-box; */
 }
 .header {
-  border: 1px solid red;
   position: sticky;
   top: 0;
 }

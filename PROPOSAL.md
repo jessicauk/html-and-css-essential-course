@@ -3,21 +3,22 @@
 
 ## Abstract
 
-Build a website based on Medium site.
+Build a website based on a blog site.
 
 ## Proposed Solution
 
-Build a website.
+Build a website implementing a figma UI design.
 
 ### Set up the project
-
-### Set up the infrastructure
+Install 
 
 ## Alternatives Considered
+Use your own visual studio extensions.
 
 
 ## Feature List
 
 |     Name     |     Description      |                
 | :----------: | :------------------: | 
-| Set up CI    | Set up a CI pipeline with CircleCI |
+| Add HTML    | Add HTML elements in order to provide a good semantic. |
+| Add local redirections    | Add redirections to create navigation. |
